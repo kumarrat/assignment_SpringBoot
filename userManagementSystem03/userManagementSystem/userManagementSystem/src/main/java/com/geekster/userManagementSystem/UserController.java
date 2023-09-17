@@ -45,12 +45,9 @@ public class UserController {
 
 
      @DeleteMapping("user/id/{id}")
-     public String removeUserStatusId(@PathVariable Integer id)
-     {
-          for(User user : userList)
-          {
-               if(user.getUserId().equals(id))
-               {
+     public String removeUserStatusId(@PathVariable Integer id) {
+          for (User user : userList) {
+               if (user.getUserId().equals(id)) {
                     userList.remove(user);
                     return "user" + " " + id + " " + "removed";
                }
